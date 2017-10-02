@@ -31,7 +31,7 @@ Predict seizures in intracranial EEG recordings on Kaggle.
 
 # Feedback 
 **get_embed**<br>
-Good. You could have also written it as: return tf.contrib.layers.embed_sequence(input_data, vocab_size, embed_dim)
+Good. You could have also written it as: return tf.contrib.layers.embed_sequence(input_data, vocab_size, embed_dim)<br>
 **hyper-params**<br>
 The number of epochs is set adequately, as the training loss is low and not improving much with more training.
 Batch size is large enough to train efficiently, and it is obviously small enough to fit in memory.
