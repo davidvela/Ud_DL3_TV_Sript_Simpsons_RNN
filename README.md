@@ -30,18 +30,18 @@ Predict seizures in intracranial EEG recordings on Kaggle.
 
 
 # Feedback 
-**get_embed**
+**get_embed**<br>
 Good. You could have also written it as: return tf.contrib.layers.embed_sequence(input_data, vocab_size, embed_dim)
-**hyper-params**
+**hyper-params**<br>
 The number of epochs is set adequately, as the training loss is low and not improving much with more training.
 Batch size is large enough to train efficiently, and it is obviously small enough to fit in memory.
-RNN size seems adequate.
-Embed dim is in a good range.
+RNN size seems adequate.<br>
+Embed dim is in a good range.<br>
 The sequence length seems too high. It should be around the size of the length of sentences you want to generate, and be around the average length of sentences in training data.
-Learning rate looks fine. Not too large, not too small.
-**pick_word**
+Learning rate looks fine. Not too large, not too small.<br>
+**pick_word**<br>
 You use deterministic strategy for picking words by choosing the words with the highest probability. You should consider implementing random approach (using probabilities parameter), otherwise the predictions will fall into a loop of the same words.
-**script**
+**script**<br>
 Looks quite close. All the lines start with character names, and most of the sentences have proper punctuation.
-The content should improve after you fix pick_word.
+The content should improve after you fix pick_word.<br>
 
